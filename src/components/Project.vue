@@ -1,16 +1,14 @@
 <template>
+  <div>
+  </div>
 </template>
 
 <script>
 
   export default {
-    name: 'business',
+    name: 'project',
     data() {
-      return {
-      }
-
-    },
-    components: {
+      return {}
     }
   }
 </script>

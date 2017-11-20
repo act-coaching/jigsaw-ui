@@ -12,8 +12,8 @@
         <div class="collapse navbar-collapse" id="navbar-collapse-4">
           <ul class="nav navbar-nav">
             <li><router-link to="/dashboard">Dashboard</router-link></li>
-            <li><router-link to="/person">Person</router-link></li>
-            <li><router-link to="/business">Business</router-link></li>
+            <li><router-link to="/person">Project</router-link></li>
+            <li><router-link to="/business">Team</router-link></li>
           </ul>
         </div>
       </nav>
@@ -43,7 +43,8 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    margin: 30px;
+
   }
 
 </style>

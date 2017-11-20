@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Dashboard from '@/components/Dashboard'
-import Person from '@/components/Person'
-import Business from '@/components/Business'
+import Project from '@/components/Project'
+import Team from '@/components/Team'
 
 Vue.use(Router)
 export default new Router({
@@ -19,14 +19,14 @@ export default new Router({
       component: Dashboard
     },
     {
-      path: '/person',
-      name: 'Person',
-      component: Person
+      path: '/project',
+      name: 'Project',
+      component: Project
     },
     {
-      path: '/business',
-      name: 'Business',
-      component: Business
+      path: '/team',
+      name: 'Team',
+      component: Team
     }
 
   ]

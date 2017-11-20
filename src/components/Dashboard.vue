@@ -1,37 +1,77 @@
 <template>
-  <div class="table">
-    <vuetable ref="vuetable"
-              api-url="https://vuetable.ratiw.net/api/users"
-              :fields="fields"
-              pagination-data=""
-    ></vuetable>
+  <div>
+    <h1 class="pull-left">Dashboard</h1>
+    <div class="table">
+      <vuetable ref="vuetable"
+                :api-url="callURL"
+                :fields="fields"
+                title="asdfa"
+      ></vuetable>
+    </div>
   </div>
 </template>
 
 <script>
   import Vuetable from 'vuetable-2/src/components/Vuetable'
+  import * as CONFIG from '../config'
 
   export default {
     name: 'Dashboard',
     data() {
       return {
-        fields: [
-          'name', 'email', 'birthdate',
-          {
-            name: 'address.line1',
-            title: 'Address 1'
+        fields: [{
+          name: 'id',
+          title: 'ID'
+        },
+          ,{
+            name: 'name',
+            title: '이름'
           },
-          {
-            name: 'address.line2',
-            title: 'Address 2'
+          ,{
+            name: 'nickname',
+            title: '닉네임'
           },
-          {
-            name: 'address.zipcode',
-            title: 'Zipcode'
-          }
-        ]
-      }
+          ,{
+            name: 'email',
+            title: '이메일'
+          },
 
+          ,{
+            name: 'employeeNumber',
+            title: '사번'
+          },
+          {
+            name: 'cellPhoneNumber',
+            title: '휴대전화번호'
+          },
+          {
+            name: 'team',
+            title: '팀명'
+          },
+          {
+            name: 'department',
+            title: '부서명'
+          },
+          {
+            name: 'projectName',
+            title: '프로젝트명'
+          },
+          {
+            name: 'projectCode',
+            title: '프로젝트코드'
+          },
+          {
+            name: 'rank',
+            title: '직급'
+          }, {
+            name: 'duty',
+            title: '직무'
+          },{
+            name: 'assignType',
+            title: '투입구분'
+          }],
+        callURL: CONFIG.API_URL + "/persons"
+      }
     },
     components: {
       Vuetable
