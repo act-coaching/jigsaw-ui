@@ -2,6 +2,8 @@
   <div>
     <h1 class="pull-left">Dashboard</h1>
     <div class="table">
+      <input type="text" v-model="searchValue" placeholder="Search" @keyup.enter="search">
+      <button v-on:click="search">search</button>
       <vuetable ref="vuetable"
                 :api-url="callURL"
                 :fields="fields"
@@ -17,8 +19,18 @@
 
   export default {
     name: 'Dashboard',
+    methods : {
+      search : function(event){
+          if(this.searchValue.length == 0) {
+              this.callURL = CONFIG.API_URL + "/persons";
+          } else{
+              this.callURL = CONFIG.API_URL + "/persons/name/" + this.searchValue;
+          }
+      }
+    },
     data() {
       return {
+        searchValue : "",
         fields: [{
           name: 'id',
           title: 'ID'
