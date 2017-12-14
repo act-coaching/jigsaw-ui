@@ -22,19 +22,19 @@
         fields: [{
           name: 'id',
           title: 'ID'
-        },
+        }
           ,{
             name: 'name',
             title: '이름'
-          },
+          }
           ,{
             name: 'nickname',
             title: '닉네임'
-          },
+          }
           ,{
             name: 'email',
             title: '이메일'
-          },
+          }
 
           ,{
             name: 'employeeNumber',
@@ -70,7 +70,7 @@
             name: 'assignType',
             title: '투입구분'
           }],
-        callURL: CONFIG.API_URL + "/persons"
+        callURL: CONFIG.API_URL + "/dashboard"
       }
     },
     components: {
