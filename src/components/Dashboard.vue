@@ -22,9 +22,9 @@
     methods : {
       search : function(event){
           if(this.searchValue.length == 0) {
-              this.callURL = CONFIG.API_URL + "/persons";
+              this.callURL = CONFIG.API_URL + "/dashboard";
           } else{
-              this.callURL = CONFIG.API_URL + "/persons/name/" + this.searchValue;
+              this.callURL = CONFIG.API_URL + "/dashboard/name/" + this.searchValue;
           }
       }
     },
