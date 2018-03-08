@@ -13,7 +13,7 @@
           <ul class="nav navbar-nav">
             <li><router-link to="/dashboard">Dashboard</router-link></li>
             <li><router-link to="/project">Project</router-link></li>
-            <li><router-link to="/business">Team</router-link></li>
+            <li><router-link to="/team">Team</router-link></li>
           </ul>
         </div>
       </nav>
